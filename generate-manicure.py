@@ -15,7 +15,7 @@ def select_random_polish(polish_type) :
 
 # Import polishes list from text file
 def import_list(polish_type):
-    polish_list =  open('%s.txt' % polish_type).read().split('\n')
+    polish_list =  open('%s.txt' % polish_type).read().strip('\n').split('\n')
     return(polish_list)
 
 print('Welcome to the Random Manicure Generator!\n')
