@@ -10,15 +10,13 @@ taco_type = ['glossy', 'matte']
 # Select a random nail polish from the list
 def select_random_polish(polish_type) :
     polish_list =  open('%s.txt' % polish_type).read().strip('\n').split('\n')
-    i = random.randint(0,len(polish_list)-1)
-    polish = polish_list[i]
+    polish = polish_list[random.randint(0,len(polish_list)-1)]
     return(polish)
 
 print('Welcome to the Random Manicure Generator!\n')
 
 # Randomly select base polish
-i = random.randint(0,len(base_type)-1)
-base = base_type[i]
+base = base_type[random.randint(0,len(base_type)-1)]
 print('Your base type is : %s' % base)
 polish = select_random_polish(base)
 print('Your random polish is : %s\n' % polish)
