@@ -9,7 +9,7 @@ taco_type = ['glossy', 'matte']
 
 # Select a random nail polish from the list
 def select_random_polish(polish_type) :
-    polish_list =  open('%s.txt' % polish_type).read().strip('\n').split('\n')
+    polish_list =  open('files/%s.txt' % polish_type).read().strip('\n').split('\n')
     polish = polish_list[random.randint(0,len(polish_list)-1)]
     return(polish)
 
