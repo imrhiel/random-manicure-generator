@@ -42,3 +42,5 @@ if input_taco.lower() == 'y':
     print('Your taco is: %s' % taco)
 else:
     print('Please still use a taco!')
+
+exit 0
