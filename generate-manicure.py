@@ -9,14 +9,10 @@ taco_type = ['glossy', 'matte']
 
 # Select a random nail polish from the list
 def select_random_polish(polish_type) :
+    polish_list =  open('%s.txt' % polish_type).read().strip('\n').split('\n')
     i = random.randint(0,len(polish_list)-1)
     polish = polish_list[i]
     return(polish)
-
-# Import polishes list from text file
-def import_list(polish_type):
-    polish_list =  open('%s.txt' % polish_type).read().strip('\n').split('\n')
-    return(polish_list)
 
 print('Welcome to the Random Manicure Generator!\n')
 
@@ -24,14 +20,12 @@ print('Welcome to the Random Manicure Generator!\n')
 i = random.randint(0,len(base_type)-1)
 base = base_type[i]
 print('Your base type is : %s' % base)
-polish_list = import_list(base)
 polish = select_random_polish(base)
 print('Your random polish is : %s\n' % polish)
 
 # Select topper if needed
 input_topper = input("Do you wish to roll for a topper? (Y/n, defaults to yes):")
 if input_topper.lower() == 'y' or  input_topper == '':
-    polish_list = import_list('topper')
     topper = select_random_polish('topper')
     print('Your topper is: %s' % topper)
 
