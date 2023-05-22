@@ -43,4 +43,4 @@ if input_taco.lower() == 'y':
 else:
     print('Please still use a taco!')
 
-exit 0
+exit(0)
