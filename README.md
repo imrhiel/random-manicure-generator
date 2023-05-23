@@ -16,4 +16,5 @@ The lists of specific nail polishes are found in text files. The file is placed 
 - A linear holographic polish is a polish containing a lot of holographic glitter.
 - A multichrome polish is a polish with the colour shifting depending on the light.
 - A topper is a transparent polish containing glitter or foils for pretty, shiny effects.
+
 This has absolutely no impact on the script usage but I thought it could be useful.
