@@ -27,17 +27,30 @@ polish = select_random_polish(base)
 print('Your random polish is : %s\n' % polish)
 
 # Select topper if needed
-input_topper = input("Do you wish to roll for a topper? (Y/n, defaults to yes):")
-if input_topper.lower() == 'y' or  input_topper == '':
-    topper = select_random_polish('topper')
-    print('Your topper is: %s' % topper)
+input_topper = input("Do you wish to roll for a topper? (Y/n): ")
+i = 1
+while i == 1:
+    if input_topper.lower() == 'y' or  input_topper == '':
+        topper = select_random_polish('topper')
+        print('Your topper is: %s' % topper)
+        i+=1
+    elif input_topper.lower() =='n':
+        i+=1
+    else:
+        input_topper=input("Please type y or n: ")
 
 # Select taco if needed
-input_taco = input("Do you wish to roll for a taco (top coat)? (y/n):")
-if input_taco.lower() == 'y':
-    taco = roll_polish(taco_type)
-    print('Your taco is: %s' % taco)
-else:
-    print('Please still use a taco!')
+input_taco = input("Do you wish to roll for a taco (top coat)? (y/N): ")
+i = 1
+while i == 1:
+    if input_taco.lower() == 'y':
+        taco = roll_polish(taco_type)
+        print('Your taco is: %s' % taco)
+        i+=1
+    elif input_taco.lower() == 'n' or input_taco == '':
+        print('Please still use a taco!')
+        i+=1
+    else:
+        input_taco=input("Please type y or n: ")
 
 exit(0)
