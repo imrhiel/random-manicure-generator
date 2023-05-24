@@ -1,6 +1,8 @@
 # Author : imriel <enki@faloran.fr>
 # This is the main script for the random manicure generator
 
+# ------------------------------ INITIALIZING ------------------------------
+
 import random
 
 # Defining our polishes lists
@@ -11,20 +13,22 @@ taco_type = ['glossy', 'matte']
 def roll_polish(polish_type) :
     return polish_type[random.randint(0,len(polish_type)-1)]
     
-
 # Select a random nail polish from the list
 def select_random_polish(polish_type) :
     polish_list =  open('files/%s.txt' % polish_type).read().strip('\n').split('\n')
     polish = roll_polish(polish_list)
     return(polish)
 
+
+# --------------------------------- MAIN SCRIPT --------------------------------
+
 print('Welcome to the Random Manicure Generator!\n')
 
 # Randomly select base polish
 base = roll_polish(base_type)
-print('Your base type is : %s' % base)
+print('Your base type is: %s' % base)
 polish = select_random_polish(base)
-print('Your random polish is : %s\n' % polish)
+print('Your random polish is: %s\n' % polish)
 
 # Select topper if needed
 input_topper = input("Do you wish to roll for a topper? (Y/n): ")
